@@ -41,7 +41,7 @@ Start learn Script == runLearn.sh
 
 Script Useage
 ./runLearn.sh
-runs all the commands to start a learn intstallation including
+runs all the commands to start learn including
 learn.util/startLearn
 /ultra-router/start
 /ultra-ui/grunt develop
@@ -50,12 +50,14 @@ learn.util/startLearn
 TO SCHEDULE THE UPDATE SCRIPTS TO RUN AT A CERTAIN TIME EVERY DAY
 
 To start a newly added plist schedule run
-launchctl load ~/Library/LaunchAgents/net.ryan.refresh.plist 
+launchctl load ~/Library/LaunchAgents/net.ryan.refresh.plist
+
 To unload (stop) a plist schedule run the following
 launchctl unload ~/Library/LaunchAgents/net.ryan.refresh.plist
 
 PLIST file for launchd. Create a file named similar to the example of net.ryan.refresh.plist. Copy paste the xml below
 into the file customizing it to your needs. Put this file in the user's LaunchAgents folder (~/Library/LaunchAgents/)
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
