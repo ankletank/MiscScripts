@@ -37,14 +37,6 @@ case $i in
 esac
 done
 
-###############################################################
-## Simply holds the timestamp of the last time the default   ##
-## behaviour (running all without cmdline params) of this    ##
-## script ran. Enforces run only once per day feature useful ##
-## when script is scheduled with launchd or similar. ##########
-LASTRUN_PATH="/Users/rallen/refreshBbLastRun.txt" 
-
-
 ####################################################################
 ### If no parameters given then run all the scripts for the day. ###
 if [ $# -eq 0 ]; then
@@ -136,30 +128,8 @@ fi
 ################################################################
 ### The default behaviour of running everything happens here ###
 if [ $runAll ]; then
-    if [ ! -f $LASTRUN_PATH ]; then
-       
-       LASTRUN=$(date -v-1d '+%m%d%Y')
-       #LASTRUN=$(date -v -1d '+%m%d%Y')
-    else
-       source $LASTRUN_PATH
-       LASTRUN=$(date -r $lastRun '+%m%d%Y')
-    fi
-
-    CURRENT=$(date '+%m%d%Y')
-
-    if [ $CURRENT -ne $LASTRUN ]; then
-	echo "We are running everything..."
-        goodMorning
-        updateCmd
-        ultraRouter
-
-	### Log the time to file
-        echo "lastRun=$(timestamp)" >refreshBbLastRun.txt
-    else
-        echo "We already ran all scripts today. Not doing it again for safety reasons."
-        echo "To force a run, delete file named 'refreshBbLastRun.txt'"
-	echo "or use cmdline params to run something or everything"
-#	exit 1
-    fi
+    goodMorning
+    updateCmd
+    ultraRouter
 fi
 
