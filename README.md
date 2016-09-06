@@ -6,11 +6,9 @@ Using the bash scripts
 UPDATE SCRIPT == refreshBb.sh
 First, open the refreshBb.sh and configure the root directory paths
 
-
 Script Useage
 ./refreshBb.sh
-this will run everything. It will only do so if it hasn’t already ran for the day. To force run after the first run of the day
-you will need to delete ./refreshBbLastRun.txt file. I intend for this to be used in conjunction with cron to run this in the mornings automatically
+this will run everything.
 
 Script Useage
 ./refereshBb.sh -g
