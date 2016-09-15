@@ -1,3 +1,9 @@
+SCRIPTS
+
+Scala Simple Build Tool (SBT)
+makedirs4sbt
+place in /usr/local/bin and make it executable (chmod u+x scriptname)
+
 # bbUpdateRunScripts
 scripts for work
 
