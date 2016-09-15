@@ -1,12 +1,12 @@
 # SCRIPTS
 
-SBT dir structure and build.sbt file generation for new Scala project
+# SBT dir structure and build.sbt file generation for new Scala project
 
 makedirs4sbt
 place in /usr/local/bin and make it executable (chmod u+x scriptname)
 
 
-Blackboard Update and Run learn Scripts
+# Blackboard Update and Run learn Scripts
 
 Using the bash scripts
 
