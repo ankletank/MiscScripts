@@ -1,8 +1,9 @@
 # SCRIPTS
 
-# SBT dir structure and build.sbt file generation for new Scala project
+# Scala SBT dir structure and build.sbt file generation
 
 makedirs4sbt
+
 place in /usr/local/bin and make it executable (chmod u+x scriptname)
 
 
